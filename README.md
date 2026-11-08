@@ -1,18 +1,20 @@
 FEATURES:
 
-1. bool fileExists(string name): Checks if a file named "name" exists in the build directory.
-2. bool varExists(string name): Creates a folder named "vars" in the build directory and checks whether file "name" exists.
-3. string defDir(): Returns the default build directory as a string.
-4. string varDir(): Returns the "vars" directory and creates it if it doesn't exist.
-5. void createFile(string name, string dir): Creates a subdirectory dir in the build directory and a file named "name" in it. The following is written in the file: 
-
+1. bool fileExists(string name): Checks if a file named "name" exists in the build directory. Example: fileExists(message.txt)
+3. bool varExists(string name): Creates a folder named "vars" in the build directory and checks whether file "name" exists.
+4. string defDir(): Returns the default build directory as a string. Ex: "C:\...\BUILD\"
+6. string varDir(): Returns the "vars" directory and creates it if it doesn't exist. Ex: "C:\...\BUILD\vars"
+8. void createFile(string name, string dir): Creates a subdirectory dir in the build directory and a file named "name" in it. The following is written in the file: 
    1. 01010100011100100111010101100101
-   2.  MODIFY AT YOUR OWN RISK                                
+   2. MODIFY AT YOUR OWN RISK                                
 The first line is a code which spells out TRUE in binary. The second a warning to users to modify at their own risk. The binary code is to ensure that the file was generated automatically,
-and is used for the fileStatus() function which checks whether a file has been generated successfully.
-7. void createFile(string name, string dir, string decvar): Here it inserts the third line decvar. It generates the file like the previous createFile function but adds a third line with
-the string decvar.
-8. bool fileStatus(string name, string dir). Checks whether
+and is used for the fileStatus() function which checks whether a file has been generated successfully. Example: createFile(mvars.txt, vars) creates the file "BUILD\vars\mvars.txt" with the two default lines mentioned earlier.
+9. void createFile(string name, string dir, string decvar): Here it inserts the third line decvar. It generates the file like the previous createFile function but adds a third line with
+the string decvar. Example: createFile(mvars.txt, vars, "37$") creates the file "BUILD\vars\mvars.txt" containing the lines:
+   1. 01010100011100100111010101100101
+   2. MODIFY AT YOUR OWN RISK
+   3. 37$
+11. bool fileStatus(string name, string dir). Checks whether
         1. The File Exists
         2. The first line is:
    01010100011100100111010101100101
