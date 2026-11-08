@@ -10,6 +10,7 @@ FEATURES:
 
 The first line is a code which spells out TRUE in binary. The second a warning to users to modify at their own risk. The binary code is to ensure that the file was generated automatically,
 and is used for the fileStatus() function which checks whether a file has been generated successfully. Example: createFile(mvars.txt, vars) creates the file "BUILD\vars\mvars.txt" with the two default lines mentioned earlier.
+
 9. void createFile(string name, string dir, string decvar): Here it inserts the third line decvar. It generates the file like the previous createFile function but adds a third line with
 the string decvar. Example: createFile(mvars.txt, vars, "37$") creates the file "BUILD\vars\mvars.txt" containing the lines:
    1. 01010100011100100111010101100101
