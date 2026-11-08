@@ -19,5 +19,6 @@ the string decvar.
 
 TO BE IMPLEMENTED: 
 9. void modifyFile(string name, string dir, string decvar): Replaces the third line of the file BUILD\dir\name with the string decvar.
+
 10. void modifyFile(string name, string dir, string decvar, int lnum): Same as above but lets you choose which line to modify, including line 1 which shouldn't be modified.
-11. 
+    
