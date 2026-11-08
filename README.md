@@ -28,7 +28,7 @@ the string decvar. Example: createFile(mvars.txt, vars, "37$") creates the file 
 
 TO BE IMPLEMENTED: 
 
-X - default versions of existing functions without requiring a dir. (creates in build folder)
+X - default versions of existing functions without requiring a dir. (functions applying to base build folder without subdirs)
 
 10. void modifyFile(string name, string dir, string decvar): Replaces the third line of the file BUILD\dir\name with the string decvar.
 
