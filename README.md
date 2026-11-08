@@ -18,6 +18,7 @@ the string decvar. Example: createFile(mvars.txt, vars, "37$") creates the file 
    2. MODIFY AT YOUR OWN RISK
    3. 37$
 9. bool fileStatus(string name, string dir). Checks whether
+    
         1. The File Exists
         2. The first line is:
    01010100011100100111010101100101
