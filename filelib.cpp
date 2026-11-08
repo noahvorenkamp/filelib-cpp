@@ -1,9 +1,10 @@
 
 #include  <iostream>
 #include <fstream>
-using namespace std;
 #include "filelib.h"
 #include  <filesystem>
+using namespace std;
+
 bool fileExists(string name) {
     ifstream file(defDir() + "/" + name);
     return file.good();
