@@ -1,4 +1,5 @@
 FEATURES:
+C++ File Library
 
 1. bool fileExists(string name): Checks if a file named "name" exists in the build directory. Example: fileExists(message.txt)
 3. bool varExists(string name): Creates a folder named "vars" in the build directory and checks whether file "name" exists.
