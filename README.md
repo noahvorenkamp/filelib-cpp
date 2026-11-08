@@ -5,13 +5,13 @@ Features:
 3. string defDir(): Returns the default build directory as a string.
 4. string varDir(): Returns the "vars" directory and creates it if it doesn't exist.
 5. void createFile(string name, string dir): Creates a subdirectory dir in the build directory and a file named "name" in it. The following is written in the file:
-        01010100011100100111010101100101
-        MODIFY AT YOUR OWN RISK                                
+   1. 01010100011100100111010101100101
+   2.  MODIFY AT YOUR OWN RISK                                
 The first line is a code which spells out TRUE in binary. The second a warning to users to modify at their own risk. The binary code is to ensure that the file was generated automatically,
 and is used for the fileStatus() function which checks whether a file has been generated successfully.
-6. void createFile(string name, string dir, string decvar): Here it inserts the third line decvar. It generates the file like the previous createFile function but adds a third line with
+7. void createFile(string name, string dir, string decvar): Here it inserts the third line decvar. It generates the file like the previous createFile function but adds a third line with
 the string decvar.
-7. bool fileStatus(string name, string dir). Checks whether
+8. bool fileStatus(string name, string dir). Checks whether
         1. The File Exists
         2. The first line is:
    01010100011100100111010101100101
