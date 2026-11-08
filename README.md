@@ -1,4 +1,4 @@
-Features:
+FEATURES:
 
 1. bool fileExists(string name): Checks if a file named "name" exists in the build directory.
 2. bool varExists(string name): Creates a folder named "vars" in the build directory and checks whether file "name" exists.
