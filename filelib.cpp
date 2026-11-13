@@ -52,6 +52,56 @@ bool fileStatus(string name, string dir) {
     }
     return false;
 }
+int lineCounter(string name, string dir) {
+    ifstream file(defDir() + "\\" + dir +  "\\" + name, ios::in);
+    string line;
+    int lineCount = 0;
+    while (getline(file, line)) {
+        lineCount++;
+    }
+    return lineCount;
+}
+
+void deleteFile(string name, string dir) {
+   string stringPath = defDir() + "\\" + dir + "\\" + name;
+    const char* path = stringPath.c_str();
+    remove(path);
+}
+
+
+
+void modifyFile(string name, string dir, string decvar, int lnum) {
+    string path = defDir() + "\\" + dir + "\\" + name;
+    if (lnum == 0 || lnum < 0) {
+        cout << "File " + path + " could not be modified. Invalid line number." << endl;
+        return;
+    }
+    int baseLineCount = lineCounter(name, dir);
+    int lineCount = max(lnum, baseLineCount);
+    string write[lineCount];
+    ifstream inFile(path, ios::in);
+    for (int i =0; i < baseLineCount; i++) {
+        getline(inFile, write[i]);
+    }
+    inFile.clear();
+    inFile.close();
+    write[lnum-1] = decvar;
+    remove(path.c_str());
+    ofstream outFile(path, ios::trunc);
+    for (int i =0; i < lineCount; i++ ) {
+        outFile << write[i] << endl;
+    }
+    outFile.clear();
+    outFile.close();
+
+}
+void modifyFile(string name, string dir, string decvar) {
+    modifyFile(name, dir, decvar, 3);
+}
+
+
+
+
 
 
 
