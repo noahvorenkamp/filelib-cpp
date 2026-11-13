@@ -32,6 +32,7 @@ the string decvar. Example: createFile(mvars.txt, vars, "37$") creates the file 
 
 TO BE IMPLEMENTED: 
 
+Full API reference which includes the lesser important functions such as lineCounter(); 
 12. getVar(string name, string dir). Returns line 3 of "C:\\...\BUILD\DIR\name". 
 
 
