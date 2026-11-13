@@ -26,15 +26,13 @@ the string decvar. Example: createFile(mvars.txt, vars, "37$") creates the file 
         2. The first line is:
           01010100011100100111010101100101
 
-TO BE IMPLEMENTED: 
-
-X - default versions of existing functions without requiring a dir. (functions applying to base build folder without subdirs)
-
 10. void modifyFile(string name, string dir, string decvar): Replaces the third line of the file "C:\\...\BUILD\dir\name" with the string decvar.
 
-12. void modifyFile(string name, string dir, string decvar, int lnum): Same as above but lets you choose which line to modify, including line 1 which shouldn't be modified.
- 
-13. getVar(string name, string dir). Returns line 3 of "C:\\...\BUILD\DIR\name". 
+11. void modifyFile(string name, string dir, string decvar, int lnum): Same as above but lets you choose which line to modify, including line 1 which shouldn't be modified.
+
+TO BE IMPLEMENTED: 
+
+12. getVar(string name, string dir). Returns line 3 of "C:\\...\BUILD\DIR\name". 
 
 
 
