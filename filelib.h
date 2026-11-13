@@ -13,7 +13,10 @@ string varDir();  // Gives you the directory of the variables folder (within the
 void createFile(string name, string dir); //creates a file called name at build folder \ dir
 void createFile(string name, string dir, string );
 bool fileStatus(string name, string dir);
-
+int lineCounter(string name, string dir);
+void deleteFile(string name, string dir);
+void modifyFile(string name, string dir, string decvar);
+void modifyFile(string name, string dir, string decvar, int lnum);
 
 
 #endif //UNTITLED_FILELIB_H
